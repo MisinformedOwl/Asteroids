@@ -22,4 +22,6 @@ If you do not already, since i haven't uploaded a .yml file for the environment 
 
 Once these are available you can play it by launching the anaconda command prompt and type in...
 
+```
   python game.py
+```
