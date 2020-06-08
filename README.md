@@ -19,7 +19,6 @@ If you do not already, since i haven't uploaded a .yml file for the environment 
 - pygame
 - random
 - math
-- PIL (pillow)
 - time
 
 Once these are available you can play it by launching the anaconda command prompt and type in...
@@ -27,3 +26,16 @@ Once these are available you can play it by launching the anaconda command promp
 ```
   python game.py
 ```
+
+# The basics of how to play
+> Settings
+
+When the game launches you will be asked how big you want the screen in pixels. the size of the screen has an impact on the difficulty in terms of maneuverability. 
+
+> The controls
+
+This game uses the typical wsad settings to move.
+
+W: Move the ship forward
+A and D: Turns the ship left and right respectivly.
+S: Quickly grinds the ship to a halt.
