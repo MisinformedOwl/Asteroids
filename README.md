@@ -14,12 +14,7 @@ The game has a exe uploaded onto github. launching this in its contained file wi
 > the .py file
 
 For this i used anaconda, with the IDE spyder.
-If you do not already, since i haven't uploaded a .yml file for the environment you will need these libraries available:
-
-- pygame
-- random
-- math
-- time
+There is a yml file available for download. to use this you will have to import it to anaconda using either the terminal or the navigator
 
 Once these are available you can play it by launching the anaconda command prompt and type in...
 
