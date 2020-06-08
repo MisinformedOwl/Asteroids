@@ -1,7 +1,6 @@
 import pygame
 import random
 import math
-from PIL import Image
 import time
 
 #Made screenSize global as it is passed around alot. Less...
@@ -133,9 +132,9 @@ class meteor():
             self.direction = random.randint(0,359)
             self.size = random.randint(15, 50)
         elif split != None:
-            if self.size/2 < 15:
+            if parent.size/2 < 18:
                 return
-            print("splitter")
+            self.size = parent.size/2
             self.size = parent.size
             self.x = parent.x
             self.y = parent.y
