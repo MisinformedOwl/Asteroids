@@ -7,9 +7,7 @@ This is simply a test, and allowing me to work with unsupervised AI learning.
 # How to play
 > The exe
 
-So pyinstaller isn't working today apparently, therefore Imma take a break and look at this tomorrow.
-
-The game has a exe uploaded onto github. launching this in its contained file with both sprites and fonts available to it should allow the program to run with no issues.
+Pyinstaller the library used to create exe files is not working. looking into how to fix this
 
 > the .py file
 
