@@ -95,7 +95,12 @@ class bullet():
             y = met.y+met.size/2
             distance = math.sqrt(math.pow(x-self.x,2) + math.pow(y-self.y,2))
             if distance < met.size/2:
-                mets.append(meteor(win, met, met.direction-30, 1))
+                newMet = meteor(win, met, met.direction-30, 1)
+                if newMet.size < 15:
+                    mets.pop()
+                    mets.remove(met)
+                    return mets, True
+                mets.append(newMet)
                 mets.append(meteor(win, met, met.direction+30, 1))
                 mets.remove(met)
                 return mets, True
@@ -132,7 +137,7 @@ class meteor():
             self.direction = random.randint(0,359)
             self.size = random.randint(15, 50)
         elif split != None:
-            if parent.size/2 < 18:
+            if parent.size/2 < 15:
                 return
             self.size = parent.size/2
             self.size = parent.size
@@ -298,7 +303,7 @@ def play():
                 run = False
         
         #if the time hits the 3 second mark spawn meteors equal to the equation
-        if time.time() - timeDelayMet > 2:
+        if time.time() - timeDelayMet > 1:
             timeDelayMet = time.time()
             mets.append(meteor(win))
         
