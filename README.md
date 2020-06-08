@@ -39,3 +39,4 @@ This game uses the typical wsad settings to move.
 W: Move the ship forward
 A and D: Turns the ship left and right respectivly.
 S: Quickly grinds the ship to a halt.
+Space: Shoot a shot
