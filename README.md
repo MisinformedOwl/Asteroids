@@ -36,7 +36,7 @@ When the game launches you will be asked how big you want the screen in pixels. 
 
 This game uses the typical wsad settings to move.
 
-W: Move the ship forward
-A and D: Turns the ship left and right respectivly.
-S: Quickly grinds the ship to a halt.
-Space: Shoot a shot
+- W: Move the ship forward
+- A and D: Turns the ship left and right respectivly.
+- S: Quickly grinds the ship to a halt.
+- Space: Shoot a shot
