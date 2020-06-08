@@ -34,7 +34,7 @@ When the game launches you will be asked how big you want the screen in pixels. 
 
 > The controls
 
-This game uses the typical wsad settings to move.
+This game uses the typical WASD settings to move.
 
 - W: Move the ship forward
 - A and D: Turns the ship left and right respectivly.
