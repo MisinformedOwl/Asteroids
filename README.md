@@ -10,7 +10,18 @@ This game is finished with a fully working and trainable AI.
 For this i used anaconda. So the first requirement is to have anaconda installed.
 Step 2 is to import Asteroids.yml into the anaconda navigator in the environments tab.
 
-Once these are available you can play it by launching the anaconda command prompt and navigating to the folder location type in...
+Next step is to open the anaconda command prompt. and type in 
+```
+  conda activate Asteroids
+```
+This will enable the environment.
+Next step is to navigate to the folder location the game is stored.
+This can be done using 
+```
+  cd [Copy and paste folder address here]
+```
+
+Lastly typing this will run the game.
 
 ```
   python gui.py
