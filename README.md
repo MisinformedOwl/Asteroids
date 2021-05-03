@@ -16,7 +16,7 @@ There is a yml file available for download. to use this you will have to import 
 Once these are available you can play it by launching the anaconda command prompt and type in...
 
 ```
-  python game.py
+  python gui.py
 ```
 
 # The basics of how to play
