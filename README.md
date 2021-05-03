@@ -1,8 +1,7 @@
 # Asteroids
 A asteroids remake in python
 
-This game is a in progress project where i will be creating an AI that will play the game.
-This is simply a test, and allowing me to work with unsupervised AI learning.
+This game is finished with a fully working and trainable AI.
 
 # How to play
 > The exe
