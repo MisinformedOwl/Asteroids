@@ -17,6 +17,10 @@ Next step is to open the anaconda command prompt. and type in
 This will enable the environment.
 Next step is to navigate to the folder location the game is stored.
 This can be done using 
+
+Notes for this
+
+Make sure that the saved location is in the same drive as the command prompt. 
 ```
   cd [Copy and paste folder address here]
 ```
@@ -44,6 +48,6 @@ This game uses the typical WASD settings to move.
 
 - W: Move the ship forward
 - A and D: Turns the ship left and right respectivly.
-- S: Quickly grinds the ship to a halt.
+- S: Slows the ship down
 - F: Summon AI drone
 - Space: Shoot a shot
