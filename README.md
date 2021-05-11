@@ -44,10 +44,10 @@ Whereas play involves you shooitng asteroids with the help of a AI companion.
 
 > The controls
 
-This game uses the typical WASD settings to move.
+This game uses the arrow keys to move.
 
-- W: Move the ship forward
-- A and D: Turns the ship left and right respectivly.
-- S: Slows the ship down
+- up: Move the ship forward
+- left and right: Turns the ship left and right respectivly.
+- down: Slows the ship down
 - F: Summon AI drone
 - Space: Shoot a shot
