@@ -3,33 +3,17 @@ A asteroids remake in python
 
 This game is finished with a fully working and trainable AI.
 
-# How to play
+# Setup
 
-> the .py file
+Due to unknwon issues regarding the method of running through the command prompt we will be using the
 
-For this i used anaconda. So the first requirement is to have anaconda installed.
-Step 2 is to import Asteroids.yml into the anaconda navigator in the environments tab.
+> Anaconda Navigator
 
-Next step is to open the anaconda command prompt. and type in 
-```
-  conda activate Asteroids
-```
-This will enable the environment.
-Next step is to navigate to the folder location the game is stored.
-This can be done using 
+Firstly open anaconda navitator and navigate to environment section. press import and make the name Called "Asteroids". Then after this navigate to the folder and import the Asteroids.yml file. After this anaconda will begin to add the environment. after a few seconds/minutes the environment will change, if not please click on the asteroids environemtn that has just been imported. 
 
-Notes for this
+Next go back to the home page and download Spyder. after this is downloaded open spyder and drag and drop the gui.py into spyder. after this you will be able to run the application by clicking the green arrow.
 
-Make sure that the saved location is in the same drive as the command prompt. 
-```
-  cd [Copy and paste folder address here]
-```
-
-Lastly typing this will run the game.
-
-```
-  python gui.py
-```
+Beware the kernel has a tendency to restart after every run. I believe this is an issue to do with pygame moreso than my actual code.
 
 # The basics of how to play
 > Settings
@@ -40,14 +24,19 @@ The first set of options are the colours of asteroids aswell as the player ships
 There is also a debug option, which will show a variety of information such as player ship hitbox, closeness from asteroids. and vision lines from the AI drone. Be warned this will cause a decrease in performance towards the late stages of the game.
 
 Next you are given the option between training and playing. Training trains the AI in a simulation where the only ship in the game is itself. It will learn after every death and update the rules it uses.
-Whereas play involves you shooitng asteroids with the help of a AI companion.
+
+Whereas play involves you shooting asteroids with the help of a AI companion.
+
+> Training
+
+One of the options presented to the user is the train button. clicking this will cause the AI to play the game repeatedly, learning after each iteration. This process takes time, after all there are over 4000 rules to work with. However after closing the window the AI is automatically updated and ready to be used in play.
 
 > The controls
 
-This game uses the typical WASD settings to move.
+This game uses the arrow keys to move.
 
-- W: Move the ship forward
-- A and D: Turns the ship left and right respectivly.
-- S: Slows the ship down
+- up: Move the ship forward
+- left and right: Turns the ship left and right respectivly.
+- down: Slows the ship down
 - F: Summon AI drone
 - Space: Shoot a shot
