@@ -5,31 +5,9 @@ This game is finished with a fully working and trainable AI.
 
 # How to play
 
-> the .py file
+> Anaconda Navigator
 
-For this i used anaconda. So the first requirement is to have anaconda installed.
-Step 2 is to import Asteroids.yml into the anaconda navigator in the environments tab.
-
-Next step is to open the anaconda command prompt. and type in 
-```
-  conda activate Asteroids
-```
-This will enable the environment.
-Next step is to navigate to the folder location the game is stored.
-This can be done using 
-
-Notes for this
-
-Make sure that the saved location is in the same drive as the command prompt. 
-```
-  cd [Copy and paste folder address here]
-```
-
-Lastly typing this will run the game.
-
-```
-  python gui.py
-```
+Firstly open anaconda navitator and navigate to environment section. Given that you have installed the asteroids environment  you must activate the asteroids environment by clicking on it. after a few seconds/minutes the environment will change, go back to the home page and download Spyder. after this is downloaded open spyder and drag and drop the gui.py into spyder. after this you will be able to run the application by clicking the green arrow.
 
 # The basics of how to play
 > Settings
