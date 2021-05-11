@@ -807,6 +807,7 @@ def play(debugselected, asteroidColorSelected):
         y = screenSize/2
         velx,vely = 0,0
         rot = 0
+        droneSupply = 2
         playerChar = pygame.image.load("sprites/player.png")
         playerSize = playerChar.get_width()
         timeDelayMet = time.time()
@@ -858,8 +859,9 @@ def play(debugselected, asteroidColorSelected):
                     timeDelayBullet = time.time()
             
             #F key to summon a drone. Warning every summoning of a drone results in worsening performance.
-            if keys[pygame.K_f] and "drone1" not in locals():
+            if keys[pygame.K_f] and "drone1" not in locals() and droneSupply > 0:
                 drone1 = drone(x,y,velx,vely,rot)
+                droneSupply = droneSupply - 1
             
             #For some reason this does not like using if drone1. Therefore i had to check the local variables instead.
             #Found the solution on how to do this here...
@@ -916,8 +918,8 @@ def play(debugselected, asteroidColorSelected):
             if "drone1" in locals():
                 droneActivity.join()
         
-        if "drone1" in locals():
-            del(drone1)
         endTime = time.time()
         GameOver(win, score)
         score = 0
+        pygame.quit()
+        break
