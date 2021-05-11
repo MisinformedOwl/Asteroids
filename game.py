@@ -313,16 +313,16 @@ class meteor():
         #Using pythagoras get the distance
         distance = math.sqrt(math.pow(x-self.x,2))+math.sqrt(math.pow(y-self.y,2))
         
-        #Debug menu shows the distance from the player. 
+        #Debug menu shows the distance from collision. 
         #Required as old collision was very bad.
         if debug:
-            text = Fon.render(f"{round(distance,2)}", True, (255,255,255))
+            text = Fon.render(f"{round(distance - (size/2 + self.size-5))}", True, (255,255,255))
             textRect = text.get_rect()
             textRect.center = (self.x-20, self.y-20)
             win.blit(text,textRect)
         
         #If both halves are less than the distance between the objects then a collision has occoured.
-        if distance < size/2 + self.size/2:
+        if distance < size/2 + self.size-5:
             return True
 
         return False
@@ -576,13 +576,16 @@ def train(debugselected, asteroidColorSelected):
     try:
         ruleslist = ModelSave.loadModel()
     except:
-        ruleslist = memory.workingMemory.Initialize()
+        ruleslist = memory.Initialize()
     
     #Create the lines memory
     lines = memory.workingMemory()
     
     #Setup fuzzy logic danger detection.
     dangerLevel = fuzzSetup()
+    
+    
+    epoch = 1
     
     #Permenantly run the program until it is closed.
     while True:
@@ -658,7 +661,6 @@ def train(debugselected, asteroidColorSelected):
             #If the x is clicked then save the model and quit.
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    ModelSave.saveModel(ruleslist)
                     pygame.quit()
             
             #Move AI based on prediction
@@ -704,9 +706,16 @@ def train(debugselected, asteroidColorSelected):
                     pass
             
             #Update the on screen information aswell as moving the player to the new position.
-            scoreBoard(win, score)
             ammount = Fon.render(f"{len(mets)}", True, (255,255,255))
             win.blit(ammount, (300,100,0,0))
+            epochText = Fon.render(f"{epoch}", True, (255,255,255))
+            win.blit(epochText, (300,0,0,0))
+            scoreBoard(win, score)
+            
+            #Score              Epoch
+            #                   Meteor count
+            
+            
             cent = playerSize/2
             x, y = movePlayer(x,y,velx,vely)
             rotatePlayer(x,y,rot, playerChar, win, cent)
@@ -721,6 +730,8 @@ def train(debugselected, asteroidColorSelected):
         #Update the score based on time survived. and update the rules list.
         score = score * (((time.time()  - startTime) / 30) + 1)
         ruleslist = update(ruleslist, rulesUsed, score, endTime)
+        ModelSave.saveModel(ruleslist)
+        epoch = epoch + 1
 
 """
 A seperate function for shooting bullets. This is due to bullets hitting performance hard, this fixes the issue by sending the problem to be managed by threads.
@@ -810,11 +821,12 @@ def play(debugselected, asteroidColorSelected):
             
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    ModelSave.saveModel(ruleslist)
                     pygame.quit()
             
             #key events
             #This contains all keyboard events
+            #Note this for some reason upon closing the program creates a pygame error.
+            #There is seemingly no reason for this as the error is becasue pygame isn't initialised. However quite clearly in line 754 it is.
             keys = pygame.key.get_pressed()
             
             #Up arrow
@@ -892,8 +904,6 @@ def play(debugselected, asteroidColorSelected):
             #The drone threads were moved here due to how long it actually takes for them to complete their tasks. 
             #Giving them some extra time saves miliseconds on performance, which is useful when things get hectic in the late stages ofthe game.
             scoreBoard(win, score)
-            ammount = Fon.render(f"{len(mets)}", True, (255,255,255))
-            win.blit(ammount, (300,100,0,0))
             cent = playerSize/2
             x, y = movePlayer(x,y,velx,vely)
             rotatePlayer(x,y,rot, playerChar, win, cent)
@@ -901,7 +911,9 @@ def play(debugselected, asteroidColorSelected):
             win.fill((0,0,0))
             if "drone1" in locals():
                 droneActivity.join()
-            
+        
+        if "drone1" in locals():
+            del(drone1)
         endTime = time.time()
         GameOver(win, score)
         score = 0

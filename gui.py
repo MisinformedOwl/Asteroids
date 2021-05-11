@@ -7,10 +7,12 @@ import threading
 def bootTraining():
     start = threading.Thread(target=game.train, args=(debugSelected.get(), asteroidColor), daemon=True)
     start.start()
+    window.destroy()
     
 def bootGame():
     start = threading.Thread(target=game.play, args=(debugSelected.get(), asteroidColor), daemon=True)
     start.start()
+    window.destroy()
     
 
 playerX, playerY = 150,150
@@ -43,6 +45,7 @@ def colorPlayer():
     color = '0x' + color[1:]
     changeShipColor(r"sprites/playerDefault.png", color, playerPoints)
     
+#For some reason the drone refuses to be the same colour even though it goes through the exact same process as the other ship. and in the files has this same color.
 def colorDrone():
     color = colorchooser.askcolor()
     color = color[1] #Grab hex encoding
