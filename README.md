@@ -24,7 +24,12 @@ The first set of options are the colours of asteroids aswell as the player ships
 There is also a debug option, which will show a variety of information such as player ship hitbox, closeness from asteroids. and vision lines from the AI drone. Be warned this will cause a decrease in performance towards the late stages of the game.
 
 Next you are given the option between training and playing. Training trains the AI in a simulation where the only ship in the game is itself. It will learn after every death and update the rules it uses.
-Whereas play involves you shooitng asteroids with the help of a AI companion.
+
+Whereas play involves you shooting asteroids with the help of a AI companion.
+
+> Training
+
+One of the options presented to the user is the train button. clicking this will cause the AI to play the game repeatedly, learning after each iteration. This process takes time, after all there are over 4000 rules to work with. However after closing the window the AI is automatically updated and ready to be used in play.
 
 > The controls
 
