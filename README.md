@@ -5,6 +5,8 @@ This game is finished with a fully working and trainable AI.
 
 # Setup
 
+Due to unknwon issues regarding the method of running through the command prompt we will be using the
+
 > Anaconda Navigator
 
 Firstly open anaconda navitator and navigate to environment section. press import and make the name Called "Asteroids". Then after this navigate to the folder and import the Asteroids.yml file. After this anaconda will begin to add the environment. after a few seconds/minutes the environment will change, if not please click on the asteroids environemtn that has just been imported. 
