@@ -37,7 +37,11 @@ def updateMoves(dangerLevel, lines):
     #For exery line
     for line in range(1,q.size()+1):
         #Get the distance of that line from the global queue
-        close = q.nextItem()
+        #Some issues regarding when the drone dies. this causes an error in here. therefroe catching this error. and outputting 250 as this is the middle range.
+        try:
+            close = q.nextItem()
+        except:
+            close = 250
         dangerLevel.input['Closeness'] = close
         #A few cases where closeness was a null value This fixes the issue
         try:
