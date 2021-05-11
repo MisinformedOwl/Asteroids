@@ -38,5 +38,5 @@ This game uses the arrow keys to move.
 - up: Move the ship forward
 - left and right: Turns the ship left and right respectivly.
 - down: Slows the ship down
-- F: Summon AI drone
+- F: Summon AI drone (Limited supply of 2 drones per game)
 - Space: Shoot a shot
