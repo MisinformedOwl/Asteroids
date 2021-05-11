@@ -9,6 +9,8 @@ This game is finished with a fully working and trainable AI.
 
 Firstly open anaconda navitator and navigate to environment section. Given that you have installed the asteroids environment  you must activate the asteroids environment by clicking on it. after a few seconds/minutes the environment will change, go back to the home page and download Spyder. after this is downloaded open spyder and drag and drop the gui.py into spyder. after this you will be able to run the application by clicking the green arrow.
 
+Beware the kernel has a tendency to restart after every run. I believe this is an issue to do with pygame moreso than my actual code.
+
 # The basics of how to play
 > Settings
 
