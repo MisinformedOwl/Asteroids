@@ -9,7 +9,7 @@ Due to unknwon issues regarding the method of running through the command prompt
 
 > Anaconda Navigator
 
-Firstly open anaconda navitator and navigate to environment section. press import and make the name Called "Asteroids". Then after this navigate to the folder and import the Asteroids.yml file. After this anaconda will begin to add the environment. This process will take some time. After this however the environment will change, if not please click on the asteroids environemtn that has just been imported. 
+Firstly open anaconda navitator and navigate to environment section. press import and import .yml. Then after this navigate to the folder and import the Asteroids.yml file. After this anaconda will begin to add the environment. This process will take some time. After this however the environment will change, if not please click on the asteroids environemtn that has just been imported. 
 
 Next go back to the home page and run Spyder. after drag and drop the gui.py into spyder. after this you will be able to run the application by clicking the green arrow.
 
@@ -38,5 +38,5 @@ This game uses the arrow keys to move.
 - up: Move the ship forward
 - left and right: Turns the ship left and right respectivly.
 - down: Slows the ship down
-- F: Summon AI drone
+- F: Summon AI drone (Limited supply of 2 drones per game)
 - Space: Shoot a shot
