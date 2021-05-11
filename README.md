@@ -3,7 +3,7 @@ A asteroids remake in python
 
 This game is finished with a fully working and trainable AI.
 
-# How to play
+# Setup
 
 > Anaconda Navigator
 
