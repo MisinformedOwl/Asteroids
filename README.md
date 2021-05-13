@@ -5,7 +5,7 @@ This game is finished with a fully working and trainable AI.
 
 # Setup
 
-Due to unknwon issues regarding the method of running through the command prompt we will be using the
+Due to unknown issues regarding the method of running through the command prompt we will be using the anaconda navigator method instead. This of course requires that you have Anaconda installed. you can acquire this here... https://www.anaconda.com/products/individual
 
 > Anaconda Navigator
 
