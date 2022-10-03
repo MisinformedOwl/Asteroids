@@ -14,7 +14,7 @@ class workingMemory:
     line8 = 0
 
 def Initialize():
-    rules = [] # 8³ * 9 = 59,049 rules
+    rules = [] # 3^8 * 9 = 59,049 rules
     
     dangers = ["low", "med", "high"]
     moves = [(1,0,0,0), (0,1,0,0), (0,0,1,0),(0,0,0,1), (0,0,0,0), (1,1,0,0), (1,0,1,0), (0,0,1,1), (0,1,0,1)] # (up, left, right, down)
